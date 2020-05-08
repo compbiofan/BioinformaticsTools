@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\title{Manuals for Bioinformatics Tools}
+\author{Xian Fan}
+\date{May 2020}
+
+\begin{document}
+
+\maketitle
+
+\section{Download SRA Data}
+
+\begin{enumerate}
+    \item Follow \href{https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc}{installation guide} to install SRA toolkit. 
+    \item Identify the SRR. 
+    \item For each SRR (say \$i), download data using command ``prefetch \$i".
+    \item Convert SRA format to fastq format. 
+    \begin{itemize}
+        \item Suppose the data are paired-end reads, use the command ``fastq-dump -I —split-files \$i". 
+    \end{itemize}
+\end{enumerate}
+\end{document}
